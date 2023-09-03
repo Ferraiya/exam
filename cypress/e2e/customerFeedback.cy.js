@@ -1,6 +1,7 @@
 import { faker } from '@faker-js/faker';
 import user from '../fixtures/user.json';
 import registerPage from '../support/pages/RegisterPage';
+import loginPage from '../support/pages/LoginPage';
 import sideNav from '../support/pages/SideNav';
 import mainPage from '../support/pages/MainPage';
 import homePage from '../support/pages/HomePage';
