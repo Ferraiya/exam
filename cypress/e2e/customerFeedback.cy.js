@@ -12,8 +12,8 @@ import {closeBanner } from '../support/helper';
 user.email = faker.internet.email();
 user.password = faker.internet.password({ length: 10 });
 user.answer = faker.person.firstName();
-user.questionNumber = faker.number.int({ min: 0, max: 13 })
-const text = faker.lorem.text()
+user.questionNumber = faker.number.int({ min: 0, max: 13 });
+const text = faker.lorem.words(7);
 
 before('Register user', () => {
     registerPage.visitRegisterPage();
@@ -27,10 +27,13 @@ before('Register user', () => {
 it('Fill feedback form', () => {
 
     cy.log('**Go to the side menu and click the feedback item**')
+    
     mainPage.getSideNav().click().then(() => {
 
         sideNav.getFeedbackMenuItem().click().then(() => {
             feedback.getFeedbackHeading().should('be.visible')
+
+            cy.log('**Fill feedback form**')
 
             feedback.fillInFeedbackForm(text)
 

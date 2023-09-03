@@ -126,7 +126,7 @@ it.only('Find item by search', () => {
 
             cy.log('**check if trash icon is shown**');
 
-            basket.getTrashIcon().should('be.visible')
+            basket.getTrashIcon().should('be.visible');
 
             cy.log('**Check if correct product name is shown**');
 
@@ -137,7 +137,9 @@ it.only('Find item by search', () => {
             basket.getQuantityCell().should('contain', '1');
 
             basket.getPlusIcon().click().then(() => {
+                basket.getQuantityCell().should('contain', '2');
                 basket.getMinusIcon().click().then(() => {
+                    basket.getQuantityCell().should('contain', '1');
                     basket.getPlusIcon().click().then(() => {
                         basket.getQuantityCell().should('contain', '2')
                 })
