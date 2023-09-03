@@ -1,0 +1,17 @@
+{
+  "name": "",
+  "email": "",
+  "password": "",
+  "question": "",
+  "answer": "",
+  "empty": "{backspace}",
+  "questionNumber": "",
+  "country": "",
+  "phone": "",
+  "zip": "",
+  "address": "",
+  "city": "",
+  "card": "",
+  "cardMonth": "",
+  "cardYear": ""
+}
